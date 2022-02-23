@@ -235,4 +235,3 @@ class HomeScreen extends GetView<CovidStatisticsController>{
     );
   }
 }
-
