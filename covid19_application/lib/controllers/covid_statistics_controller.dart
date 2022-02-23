@@ -20,8 +20,8 @@ class CovidStatisticsController extends GetxController{
   }
 
   void fetchCovidState() async {
-    var startDate = DateFormat('yyyyMMdd').format(DateTime.now().subtract(const Duration(days: 7)));
-    var endDate = DateFormat('yyyyMMdd').format(DateTime.now());
+    var startDate = DateFormat('yyyyMMdd').format(DateTime.now().subtract(const Duration(days: 8)));
+    var endDate = DateFormat('yyyyMMdd').format(DateTime.now().subtract(const Duration(days: 1)));
     var result = await _covidStatisticsRepository.fetchCovid19Statistics(startDate: startDate, endDate: endDate);
     if (result.isNotEmpty) {
       for (var i = 0; i < result.length; i++) {
@@ -34,6 +34,7 @@ class CovidStatisticsController extends GetxController{
       }
       _weekDatas.addAll(result.sublist(0, result.length - 1).reversed);
       _todayData(_weekDatas.last);
+      print(_todayData.value.clearCnt);
     }
   }
 
