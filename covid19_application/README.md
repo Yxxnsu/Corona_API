@@ -1,16 +1,13 @@
 # covid19_application
 
-A new Flutter project.
+코로나19에 대한 일주일간의 통계를 Bar chart와 Text를 이용해 나타낸 어플리케이션입니다.
+> API 출처: 공공데이터 포털
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+</br>
 
-A few resources to get you started if this is your first Flutter project:
+## Application 완성본
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+</br>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="341" alt="2" src="https://user-images.githubusercontent.com/64016453/155248716-d3f1c6f7-40dd-42b9-8814-adaa386c4f56.png">
