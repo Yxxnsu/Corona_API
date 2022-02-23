@@ -14,7 +14,6 @@ class HomeScreen extends GetView<CovidStatisticsController>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xff33656e),
         leading: const Icon(Icons.menu, color: Colors.white),
         elevation: 0,
         title: const Text(
@@ -28,6 +27,18 @@ class HomeScreen extends GetView<CovidStatisticsController>{
             child: const Icon(Icons.notifications, color: Colors.white),
           )
         ],
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.centerRight,
+              end: Alignment.centerLeft,
+              colors: [
+                Color(0xff3c727c),
+                Color(0xff33656e),
+              ],
+            ),
+          ),
+        ),
       ),
       extendBodyBehindAppBar: true,
       body: SafeArea(
@@ -134,7 +145,7 @@ class HomeScreen extends GetView<CovidStatisticsController>{
       ),
       Positioned(
         top: headerTopZone + 60,
-        right: 40,
+        right: 20,
         child: Obx(
           () => CovidStatisticsViewer(
             title: '확진자',
@@ -208,6 +219,7 @@ class HomeScreen extends GetView<CovidStatisticsController>{
             fontSize: 20,
           ),
         ),
+        SizedBox(height: 16,),
         AspectRatio(
           aspectRatio: 1.7,
           child: Obx(

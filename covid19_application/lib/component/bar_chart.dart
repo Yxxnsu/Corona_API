@@ -17,6 +17,11 @@ class CovidBarChart extends StatelessWidget {
       BarChartData(
         alignment: BarChartAlignment.spaceAround,
         maxY: maxY * 1.5,
+        baselineY: 0,
+        gridData: FlGridData(
+          show: true,
+          verticalInterval: 2,
+        ),
         barTouchData: BarTouchData(
           enabled: false,
           touchTooltipData: BarTouchTooltipData(
@@ -50,6 +55,8 @@ class CovidBarChart extends StatelessWidget {
                   covidDatas[value.toInt()].stateDt!);
             },
           ),
+          topTitles: SideTitles(showTitles: false),
+          rightTitles: SideTitles(showTitles: false),
           leftTitles: SideTitles(showTitles: false),
         ),
         borderData: FlBorderData(
